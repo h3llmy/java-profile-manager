@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Background image centered on the screen -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:alpha="0.5" />
+
+    <!-- Content on top of the background image -->
+    <LinearLayout
+        android:id="@+id/imageProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:paddingTop="100dp"> <!-- Adjusted padding top -->
+
+            <ImageView
+                android:id="@+id/inputProfileImage"
+                android:layout_width="137dp"
+                android:layout_height="130dp"
+                android:src="@mipmap/ic_launcher_foreground"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp">
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/ic_launcher_foreground"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/usernameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageProfile"
+        android:text="Username" />
+
+    <EditText
+        android:id="@+id/inputUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameLabel"
+        android:hint="Username" />
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputUsername"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLabel"
+        android:hint="Email" />
+
+    <TextView
+        android:id="@+id/oldPasswordLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputEmail"
+        android:text="Password Lama" />
+
+    <EditText
+        android:id="@+id/inputOldPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/oldPasswordLabel"
+        android:hint="Password Lama"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/newPasswordLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputOldPassword"
+        android:text="Password Baru" />
+
+    <EditText
+        android:id="@+id/inputNewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newPasswordLabel"
+        android:hint="Password Baru"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputNewPassword"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="200px"
+            android:text="Update" />
+    </LinearLayout>
+
+</RelativeLayout>
